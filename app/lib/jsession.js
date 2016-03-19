@@ -11,9 +11,7 @@ var globs = require('./globs');
 var utils = require('./jutils'); // app utils, eg guid()
 
 // remove DB connection for now
-var dbutils = null; // require('./jdb'); // utils dealing directly with the DB
-
-var jcol = require('./jcollection'); // jcollection utilities
+var dbutils = null; 
 
 // collection names
 var col_events = 'events'; 

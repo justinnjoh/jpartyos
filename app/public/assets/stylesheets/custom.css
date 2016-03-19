@@ -50,6 +50,17 @@ body {
 :active,
 :focus { outline: none !important; }
 
+.logo {
+  display: block;
+  padding: 30px 0px 0px 0px;
+  color: #1abc9c;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+
+}
 
 /* media widths - bootstrap 3.3.4
   xs < 768px
