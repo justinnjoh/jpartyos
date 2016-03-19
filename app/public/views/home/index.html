@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/stylesheets/bootstrap334/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/stylesheets/custom.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/stylesheets/awesome430/css/font-awesome.css" type="text/css" />
+
+    <script type="text/javascript" src="/assets/javascripts/jquery/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="/assets/stylesheets/bootstrap334/js/bootstrap.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- script src="https://cdn.socket.io/socket.io-1.3.5.js"></script -->
+    
+    <script type="text/javascript" src="/assets/javascripts/custom.js"></script>
+
+    <title>
+      Party
+    </title>
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+      <div class="row header">
+        <div class="col-md-2">
+
+          <div class="menu-toggler visible-xs-inline-block">
+            <a href="#">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
+          <div class="logo">
+            <a href="/" class="">
+              <img src="/assets/images/logo.png" alt="Logo" title="Logo" />
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-7">
+
+          <ul id="menu" class="menu list-inline visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+            <li class="current">
+              <a href="/">Home</a>
+            </li>
+
+            <li>
+              <a href="/party">Party</a>
+            </li>
+
+            <li>
+              <a href="#">My Events</a>
+            </li>
+
+            <li class="pull-right">
+              <a href="#">A link</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="col-md-3">
+
+          <ul class="socials pull-right">
+            <li>
+              <a class="facebook" href="#">
+                <i class="fa fa-facebook-square fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a class="twitter" href="#">
+                <i class="fa fa-twitter-square fa-2x"></i>
+              </a>
+            </li>
+
+            <li>
+              <a class="pinterest" href="#">
+                <i class="fa fa-pinterest-square fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a class="linkedin" href="#">
+                <i class="fa fa-linkedin-square fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a class="rss" href="#"></a>
+            </li>
+
+            <li>
+              <a class="google" href="#"></a>
+            </li>
+
+          </ul>
+
+        </div> <!-- col-md-12 -->
+
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="col-md-12 splash">
+
+          <span class="points p4">
+            <i class="fa fa-play"></i> Replay <i class="fa fa-pause"></i>
+          </span>
+
+          <span class="points p1" data-text="Socialise">
+          </span>
+
+          <span class="points p2" data-text="Engage">
+          </span>
+
+          <span class="points p3" data-text="Make Friends">
+          </span>
+
+          <ul>
+            <li>
+              <span>
+                1 Schedule it.
+              </span>
+            </li>
+
+            <li>
+              <span>
+                2 Host it.
+              </span>
+            </li>
+
+            <li>
+              <span>
+                3 Replay it.
+              </span>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+
+
+      <div class="row promo">
+        <div class="col-md-8">
+          <span>
+            Essential tools for guests and party planners
+          </span>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="button">
+            Log in
+          </a>
+
+          <a href="#" class="button">
+            Sign up - <em>for free !</em>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 colo-sm-6 col-xs-12">
+
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <i class="fa fa-calendar fa-2x"></i>
+              </a>
+            </div>
+
+            <div class="media-body">
+              <h4 class="media-heading">
+                Schedule &amp; Plan
+              </h4>
+              <p>
+                bbbb baba sbsbs bsbsb
+              </p>
+            </div>
+          </div>
+ 
+        </div>
+
+        <div class="col-md-4 colo-sm-6 col-xs-12">
+
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <i class="fa fa-glass fa-2x"></i>
+              </a>
+            </div>
+
+            <div class="media-body">
+              <h4 class="media-heading">
+                Host &amp; Engage
+              </h4>
+              <p>
+                bbbb baba sbsbs bsbsb
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-4 colo-sm-6 col-xs-12">
+
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <i class="fa fa-play fa-2x"></i>
+              </a>
+            </div>
+
+            <div class="media-body">
+              <h4 class="media-heading">
+                Replay &amp; ?
+              </h4>
+              <p>
+                Replay the event as if it was live.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- footer starts -->
+      <div class="row footer">
+
+        <div class="col-md-4 col-sm-6">
+          <h3>
+            About us
+          </h3>
+
+          <p>
+            Lisol is about robust but simple software designs that work.
+          </p>
+
+          <p>
+            Today Lisol is exploiting opportunities afforded by new developments in database technology to provide rapid application developments, proofs of concept and MVPs on NoSQL databases like <a href="http://www.mongodb.com" target="_new">MongoDB</a> in a true partnership approach.
+          </p>
+
+          <p>
+            We are actively seeking collaborators in this space for joint projects or just for exchange of ideas.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <h3>
+            Latest Tweets
+          </h3>
+
+          <a class="twitter-timeline" href="https://twitter.com/lisolit" data-widget-id="560897658379059202">Tweets by @lisolit</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <h3>
+            Our Contacts
+          </h3>
+
+          <address class="">
+            Old Church Hall,<br />
+            Roche, <br />
+            St Austell,<br />
+            UK<br />
+            Phone: + 44 (0) 1726 891 301<br />
+            Mobile: + 44 (0) 7434 467 492<br />
+            Skype: <br />
+            Email: <a href="#">info [at] lisol [dot] co [dot] uk</a><br />
+          </address>
+        </div>
+      </div>
+
+      <!-- end footer -->
+
+
+    </div>
+  </body>
+
+  <script type="text/javascript" src="/assets/javascripts/lisolreplay.js"></script>
+
+</html>

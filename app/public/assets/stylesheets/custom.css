@@ -1,0 +1,628 @@
+/* custom styles */
+
+/* debug stuff starts */
+.border-red {
+  border: 1px dashed #f00;
+}
+
+.border-blue {
+  border: 1px dashed #00f;
+}
+
+.border-green {
+  border: 1px dashed #0f0;
+}
+
+.border-orange {
+  border: 1px dashed #ffa500;
+}
+
+/* debug stuff ends */
+
+
+body {
+  margin: 0px 10px 0px 10px;
+
+  color: #555;
+  font-family: "Lato", sans-serif;
+  line-height: 1.5em;
+}
+
+
+::selection {
+  background: #1ABC9C;
+  color: #FFF;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #1ABC9C; /* Firefox */
+  color: #FFF;
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  background: #1ABC9C; /* Safari */
+  color: #FFF;
+  text-shadow: none;
+}
+
+:active,
+:focus { outline: none !important; }
+
+
+/* media widths - bootstrap 3.3.4
+  xs < 768px
+  sm >= 768px
+  md >= 992px
+  lg >= 1200px
+
+@media (max-width: 992 ) {
+  .menu {
+    display: block;
+  }
+
+  .menu ul li {
+    float: none;
+  }
+}
+
+@media (min-width: 992 ) {
+  .menu {
+    display: inline-block;
+  }
+}
+
+*/
+
+.padding0 {
+  padding: 0px;
+}
+
+.margin0 {
+  margin: 0px;
+}
+
+.margin-bottom8 {
+  margin-bottom: 8px;
+}
+
+
+.pad-left0 {
+  padding-left: 0px;
+}
+
+.pad-right0 {
+  padding-right: 0px;
+}
+
+
+
+
+.block {
+  display: block;
+}
+
+
+/* buttons - starts */
+
+/* buttons - ends */
+
+
+
+/* header */
+
+.header {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #1abc9c;
+  /* margin-bottom: 10px; */
+  margin-bottom: 1vh;
+}
+
+ul.menu,
+ul.socials {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul.menu li:hover a,
+ul.menu li.current a {
+  color: #1abc9c;
+}
+
+.menu-toggler {
+  position: absolute;
+  opacity: 1;
+  pointer-events: auto;
+  top: 0px;
+  margin-top: 0;
+  left: 0;
+}
+
+
+ul.menu li a {
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 15px;
+  color: #444;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  -webkit-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+  -o-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+  transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+}
+
+ul.socials li {
+  padding: 0px;
+  margin: 30px 2px 0px 0px;
+  float: left;
+}
+
+ul.socials li a {
+  color: #fff;
+  padding: 2px 0px 0px 4px;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.facebook {
+    background-color: #3e5b98;
+}
+
+.twitter {
+    background-color: #4da7de;
+}
+
+.google {
+    background-color: #d93e2d;
+}
+
+.pinterest {
+    background-color: #c92619;
+}
+
+.linkedin {
+    background-color: #3371b7;
+}
+
+.rss {
+    background-color: #f26109;
+}
+
+
+/* header ends */
+
+
+/* promo block */
+
+.promo {
+  padding: 10px 0px 10px 0px;
+  margin-bottom: 10px;
+  background-color: #7C858E;
+}
+
+.promo span {
+  display: inline-block;
+  letter-spacing: 2px;
+  margin: 13px 5px 8px;
+  line-height: 26px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.promo a {
+  margin: 5px;
+  display: inline-block;
+}
+
+.promo a.button {
+  color: #FFF;
+  font-size: 16px;
+  padding: 8px 18px;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid #FFF;
+  background: none repeat scroll 0% 0% transparent;
+}
+
+
+/* promo block */
+
+
+/* splash screen */
+
+.splash {
+  margin: 0px;
+  padding: 3vmin 0px 3vh 4vmin;
+  /* padding: 40px 0px 40px 40px;
+  height: 366px; */
+
+  background-image: url(/assets/images/sky-blue-couple.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.splash span.points {
+  display: block;
+  padding: 1.5vmin 0px 1.5vmin 0px;
+  text-transform: uppercase;
+  font-size: 4.5vmin;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.splash span.points.p1,
+.splash span.points.p2,
+.splash span.points.p3 {
+  padding-left: 5vmin;
+  color: #cc3300;
+}
+
+.splash span.points.p4 {
+  color: #fff;
+}
+
+.splash ul {
+  margin: 1.5vmin 0px 0px 0px;
+  padding: 0px;
+}
+
+.splash ul li {
+  display: block;
+  float: left;
+  padding-right: 2vw;
+}
+
+.splash ul li:last-child {
+  padding-right: 0px;
+}
+
+.splash ul li span {
+  font-size: 3.8vmin;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #cc3300;
+}
+
+
+/* splash screen */
+
+
+/* footer */
+
+.footer {
+  background-color: #313030;
+  color:  #b0b0b0;
+}
+
+
+/* footer */
+
+
+/* services */
+
+.media i {
+  color: #1abc9c;
+}
+
+
+/* services */
+
+
+
+/* images */
+
+.thumb50 {
+  width: 50px;
+  height: 50px;
+}
+
+
+/* images */
+
+
+
+/* party - header */
+
+.chat-header {
+  background-image: url(/assets/images/bg_blue.jpg);
+  color: #fff;
+}
+
+.chat-header > div {
+  padding: 1px;
+}
+
+.chat-header .media-body {
+  padding: 4px 0px 0px 0px;
+}
+
+.chat-header a {
+  color: #fff;
+}
+
+.chat-header h4 {
+  margin: 0px;
+  padding: 4px 0px 3px 0px;
+}
+
+.chat-header ul {
+  list-style: none;
+  margin: 0px;
+  padding: 3px 0px 0px 0px;
+}
+
+.chat-header ul li {
+  float: left;
+  padding: 0px 10px 4px 0px;
+}
+
+
+/* party - header */
+
+
+/* party board */
+
+.board {
+  padding: 2px 2px 2px 0px;
+  margin: 0px;
+
+  min-height: 50vh;
+  /*max-height: 52vh; */ 
+  max-height: 60vh;  
+  overflow: auto;
+}
+
+.board.padding0 {
+  padding: 0px;
+}
+
+.board iframe {
+  border: none;
+  min-height: inherit;
+  /* width: 100%; */
+  min-width: 640px;
+
+}
+
+
+.mood {
+  margin: inherit;
+  padding: 10px;
+  min-height: inherit;
+
+  background-color: #7C858E;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+/* snapshots within board */
+.cam-cnt {
+  padding: 1uw;
+  height: 50vh;
+}
+
+.cam-cnt > .cam {
+  width: 100%;
+  height: 85%;
+
+  background-color: #efefef;
+  margin-bottom: 2px;
+}
+
+.cam-cnt > .cam.border {
+  border: 1px dashed #7C858E;
+}
+
+/* party board */
+
+
+/* party room */
+.room {
+  min-height: inherit;
+  max-height: inherit;
+
+  border-right: 1px solid #7C858E;
+  /* border-bottom: 1px solid #7C858E; */
+}
+
+.room ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px 0px 0px 4px;
+  color: #000;
+}
+
+.room ul li {
+  margin: 4px 0px 4px 0px;
+  padding: 2px;
+}
+
+.room ul li:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.event-form {
+  background-color: #efefef;
+  padding: 8px;
+}
+
+.event-form span,
+.room ul li span {
+  color: #1abc9c
+}
+
+.text-line {
+  width: 76%;
+  padding: 1vh;
+  border: 1px solid #1abc9c;
+  background-color: #fff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+.text-line.no-pad {
+  padding: 2px;
+}
+
+.text-line.sm {
+  width: 50%;
+}
+
+.text-line.title {
+  width: 38.15%;
+}
+
+.text-line:focus {
+  border: solid 2px #1abc9c;
+  box-shadow: 0 0 3px 1px #969696;
+}
+
+/* party room */
+
+
+
+/* info and msg */
+
+.info {
+  padding: 6px;
+  margin: 0px;
+
+  line-height: 4.5vh;
+  color: #fff;
+  background-color: #7C858E;
+}
+
+.msg {
+  padding: 2px 0px 2px 8px;
+  margin: 0px;
+}
+
+#rpl_cmd {
+  padding: 1vh;
+  border: 1px solid #1abc9c;
+  background-color: #efefef;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+
+.msg > div {
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+
+
+/* info and msg */
+
+
+
+/* plnners STARTS */
+.planner {
+  min-height: 22vh;
+  max-height: 24vh;
+
+  margin-top: 2px;
+  padding: 0px 4px 2px 0px;
+}
+
+.planner.plan {
+  background-color: #fff;
+}
+
+.planner.wishes {
+  /* background-color: #fefefe; */
+  background-color: #fffafa;
+}
+
+.planner.likes {
+  background-color: #fff;
+}
+
+.planner .head {
+  background-image: url(/assets/images/bg_blue.jpg);
+  color: #fff;
+  display: block;
+  color: #fff;
+  padding: 4px;
+  font-size: 2.5vmin;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.planner-cnt {
+  min-height: inherit;
+  max-height: inherit;
+  padding: 4px;
+  overflow: scroll; 
+}
+
+.planner-cnt > ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.planner-cnt ul li {
+  margin: 4px 0px 4px 0px;
+  padding-bottom: 2px;
+  border-bottom: 1px dashed #1abc9c;
+}
+
+.planner-cnt ul li:nth-child(even) {
+  background-color: #fefefe;
+}
+
+.planner-cnt ul li button {
+  padding: 0.5px 0.5px 0.5px 0.5px;
+  margin: 0px 3px 0px 0px;
+  font-size: 2vh;
+}
+
+.btn-mode {
+  padding: 1px;
+  font-size: 2.2vmin;
+  float: right;
+  margin-left: 6px;
+}
+
+
+/* planners ENDs */
+
+
+
+
+/* debug container */
+.debug {
+  margin: 8px 0px 0px 0px;
+  padding: 0px;
+  border: 1px dashed #f00;
+}
+
+.debug ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.debug ul li {
+  margin 0px;
+  padding: 4px;
+}
+
+.debug ul li:nth-child(even) {
+  background-color: #efefef;
+}
+
+/* debug container */

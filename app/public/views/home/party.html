@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/stylesheets/bootstrap334/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/stylesheets/custom.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/stylesheets/awesome430/css/font-awesome.css" type="text/css" />
+
+    <link rel="stylesheet" href="/assets/javascripts/datetimepicker/jquery.datetimepicker.css" type="text/css" />
+
+
+    <script type="text/javascript" src="/assets/javascripts/jquery/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/datetimepicker/jquery.datetimepicker.js"></script>
+    <script type="text/javascript" src="/assets/stylesheets/bootstrap334/js/bootstrap.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- script src="https://cdn.socket.io/socket.io-1.3.5.js"></script -->
+
+    <script type="text/javascript" src="/assets/javascripts/custom.js"></script>
+
+    <title>
+      Party
+    </title>
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+      <div class="row header">
+        <div class="col-md-2">
+
+          <div class="menu-toggler visible-xs-inline-block">
+            <a href="#">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
+          <div class="logo">
+            <a href="/" class="">
+              <img src="/assets/images/logo.png" alt="Logo" title="Logo" />
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-7">
+
+          <ul id="menu" class="menu list-inline visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+            <li class="current">
+              <a href="/">Home</a>
+            </li>
+
+            <li>
+              <a href="/party">Party</a>
+            </li>
+
+            <li>
+              <a href="#">My Events</a>
+            </li>
+
+            <li class="pull-right">
+              <a href="#">A link</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="col-md-3">
+
+          <ul class="socials pull-right">
+            <li>
+              <a class="facebook" href="#">
+                <i class="fa fa-facebook-square fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a class="twitter" href="#">
+                <i class="fa fa-twitter-square fa-2x"></i>
+              </a>
+            </li>
+
+            <li>
+              <a class="pinterest" href="#">
+                <i class="fa fa-pinterest-square fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a class="linkedin" href="#">
+                <i class="fa fa-linkedin-square fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a class="rss" href="#"></a>
+            </li>
+
+            <li>
+              <a class="google" href="#"></a>
+            </li>
+
+          </ul>
+
+        </div> <!-- col-md-12 -->
+
+      </div> <!-- row -->
+
+      <div class="row chat-header">
+        <div class="col-md-3" style="padding-left: 1px;">
+
+          <div class="media">
+            <div class="media-left">
+              <img class="thumb50" id="rpl_host_image" src="/assets/images/users/0.jpg" />
+            </div>
+
+            <div class="media-body" id="rpl_host_name">
+              <h5 class="media-heading">
+                Anna Goss Organics
+              </h5>
+              <p>
+                Hosted by: Jasper
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-7" id="rpl_session_name">
+          <h4>
+            Pamper &amp; Paint Party Monday 20th June 2015 19:00 - 22:30
+          </h4>
+          <a href="http://www.lisol.co.uk" target="_new">http://www.lisol.co.uk</a>
+        </div>
+
+        <div class="col-md-2">
+
+          <ul>
+            <li title='Guests'>
+              <i class='fa fa-user'></i> <span id='rpl_ctr_guests'> 0</span>
+            </li>
+
+            <li title='Likes'>
+              <i class='fa fa-heart'></i> <span id='rpl_ctr_likes'> 0</span>
+            </li>
+
+            <li title='Wishes'>
+              <i class='fa fa-gift'></i> <span id='rpl_ctr_wishes'> 0</span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 board" id="rpl_board">
+
+          <div class="mood"> 
+            Welcome !
+          </div>
+
+
+        </div>
+
+        <div class="col-md-4 board padding0" id="rpl_room_ctn">
+          <div class="room">
+
+            <ul id="rpl_room">
+              <li>
+                Thank you for attending. Please enter your information below to register for the event.
+              </li>
+
+              <li>
+                <span>Your name</span> <br />
+                <input type="text" id="my_name" class="text-line sm">
+              </li>
+
+              <li>
+                <span>Access code</span> <br />
+                <input type="text" id="my_code" class="text-line sm">
+              </li>
+
+              <li>
+                <span>Email address (optional)</span> <br />
+                <input type="email" id="my_email" class="text-line sm">
+              </li>
+
+              <li>
+                <button id="btnName" disabled="disabled" type="button" class="btn btn-primary">
+                  Submit
+                </button>
+                <div class='error' id='rpl_name_error'></div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-3 info" id="rpl_info">
+          <i class="fa fa-info"></i> Please identify yourself.
+        </div>
+
+        <div class="col-md-9 msg hidden" id="rpl_msg_box">
+
+          <div>
+            <span id="rpl_cmd_cnt hidden">
+              <select id="rpl_cmd" style="hight: 20px; ">
+                <option value="">Message</option>
+                <option value="url">Video</option>
+                <option value="url">Web page</option>
+                <option value="cam">Camera</option>
+                <option value="info">Info</option>
+
+                <option value=""></option>
+                <option value="evadd">Add event</option>
+
+              </select>
+            </span>
+
+            <span>
+              <input type="text" id="rpl_msg" name="msg" class="text-line">
+
+              <input type="text" id="rpl_title" name="title" class="text-line hidden title" placeholder='Title or Caption'>
+            </span>
+
+            <span class="pull-right">
+              <button id="btnSend" type="button" class="btn btn-primary">
+                Send
+              </button>
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6 planner plan">
+
+          <span class="head" data-title='' data-data='' data-verb='tgl' data-cmd='prev'>
+            <i class='fa fa-folder'></i> 
+            Resources
+
+            <button class="btn btn-info btn-mode hidden btn-feedback" data-act='modpln' data-cmd='prev' id='btn_mode_pln'>
+              Planner
+            </button>
+
+            <button class="btn btn-info btn-mode hidden btn-feedback" data-act='modssn' data-cmd='prev' id='btn_mode_ssn'>
+              Session
+            </button>
+
+            <button class="btn btn-info btn-mode hidden btn-feedback" data-act='saversc' data-cmd='prev'>
+              <i class="fa fa-save fa-sm"></i> Save
+            </button>
+
+          </span>
+
+          <div class="planner-cnt" id="rpl_resources_cnt">
+            <ul id="rpl_resources">
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="col-md-6 planner" style="margin-top: 0px; ">
+
+          <div class="row margin0" id="rpl_mode_ssn">
+
+            <div class="col-md-6 planner wishes" >
+
+              <span class="head">
+                <i class='fa fa-heart'></i> 
+                Likes
+              </span>
+
+              <div class="planner-cnt" id="rpl_likes_cnt">
+                <ul id="rpl_likes">
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="col-md-6 planner likes pad-right0">
+
+              <span class="head">
+                <i class='fa fa-gift'></i> 
+                Wishes
+              </span>
+
+              <div class="planner-cnt" id="rpl_wishes_cnt">
+                <ul id="rpl_wishes">
+                </ul>
+              </div>
+
+            </div>
+
+          </div> <!-- row -->
+
+          <div class="planner hidden" id="rpl_mode_pln" >
+
+            <span class="head" data-title='' data-data='' data-verb='tgl' data-cmd='prev'>
+              <i class='fa fa-play'></i> 
+              Plan
+
+              <button class="btn btn-info btn-mode" data-act='saveplan' data-cmd='prev'>
+                <i class="fa fa-save fa-sm"></i> Save
+              </button>
+
+            </span>
+
+            <div class="planner-cnt" id="rpl_plan_cnt">
+              <ul id="rpl_plan">
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 debug">
+          <ul id='debug'>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="rpl_hdn" class="hidden"></div>
+    <iframe id="rpl_ifr" class="hidden"></iframe>
+
+  </body>
+
+    <script type="text/javascript" src="/assets/javascripts/lisolreplay.js"></script>
+
+</html>
