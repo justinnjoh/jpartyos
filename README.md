@@ -1,7 +1,7 @@
 
 ## Replay
 
-**Replay - an online party application - first attempt at WebRTC**
+Replay - an online party application - first attempt at WebRTC
 
 ###The Idea###
 An online application for party planners to schedule party events, invite 
